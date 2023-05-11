@@ -1,0 +1,31 @@
+
+<!--Store this code in 'add.html' file inside the 'templates' folder-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> add </title>
+        <link rel="stylesheet" href="../static/style.css">   
+    </head>
+    <body>
+        <div class="one">
+        <div class="two">
+            <h1>Demo App</h1>
+            <ul>
+                <li><a href="{{url_for('index')}}">Index</a></li>
+                <li class="active"><a href="{{url_for('add')}}">Add IP</a></li>
+                <li><a href="{{url_for('list')}}">List all Ips</a></li>
+            </ul>
+        </div>
+        <div class="registercontent" align="center">
+            <div class="registertop">
+                <h1>Add Public Ip</h1>
+            </div>
+            <div class="registerbottom">
+            <form action="{{ url_for('add')}}" method="post" autocomplete="off">
+            <input type="text" name="PublicIP" placeholder="Enter The Public Ip" class="textbox" id="PublicIP" required>
+            <input type="submit" class="btn" value="Add">
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
